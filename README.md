@@ -1,4 +1,4 @@
 # Just like the topic said...
-# Its a repository memorized my grievous experiences of Practices/contests.
+Its a repository memorized my grievous experiences of Practices/contests.
 
-22.3
+start at 22.3
