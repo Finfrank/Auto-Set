@@ -22,7 +22,7 @@ int asc[4]={65,67,71,84};
 cout<<n<<' '<<m<<endl;
 int w=m;
 //随机字母/字符串
-while(w--)//依次生成m个字符串
+while(w--)
 {
 for(int j=0;j<n;j++)
 {
