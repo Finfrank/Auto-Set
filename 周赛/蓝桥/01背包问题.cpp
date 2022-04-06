@@ -15,11 +15,11 @@ using namespace std;
 typedef long long ll;
 const ll N =1e9+3;
 ll w[103],v[103];
+vector<ll> f(N,0);
 int main()
 {
     ll n,W;
     cin>>n>>W;
-    vector<ll> f(W);
     for(int i=1;i<=n;i++) cin>>w[i];
     for(int i=1;i<=n;i++) cin>>v[i];
     for(int i=1;i<=n;i++)
@@ -30,8 +30,4 @@ int main()
         }
     }
     cout<<f[W]<<endl;
-
-
-
-
 }
