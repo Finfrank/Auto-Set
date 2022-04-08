@@ -12,26 +12,18 @@
 #include<map>
 #include<set>
 using namespace std;
-typedef long long ll;
-const ll N =1e9+3;
-ll w[103],v[103];
+int is_prime(int n)
+{
+    if(n<=1) return 0;
+    int m=floor(sqrt(n)+0.5);
+    for(int i=2;i<=m;i++)
+    if(n%i==0) return 0;
+    return 1;
+}
 int main()
 {
-    ll n,W;
-    cin>>n>>W;
-    vector<ll> f(W);
-    for(int i=1;i<=n;i++) cin>>w[i];
-    for(int i=1;i<=n;i++) cin>>v[i];
-    for(int i=1;i<=n;i++)
-    {
-        for(int j=W;j>=w[i];j--)
-        {
-            f[j]=max(f[j],f[j-w[i]]+v[i]);
-        }
-    }
-    cout<<f[W]<<endl;
-
-
-
-
+    int a ;
+    cin>>a;
+    if(a>81||(is_prime(a)&&a>10)) cout<<"No";
+    else cout<<"Yes";
 }
