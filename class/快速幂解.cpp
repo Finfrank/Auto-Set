@@ -14,7 +14,7 @@
 using namespace std;
 typedef long long ll;
 const int N=0x3f3f3f;
-int ksm(int a,int b,int c)
+ll ksm(ll a,ll b,ll c)
 {
     ll p=1;
     if(b<=0) return 0;
@@ -23,16 +23,12 @@ int ksm(int a,int b,int c)
         if(b&1) p=(p*a)%c ;
         a=(a*a)%c;
         b>>=1;
-
     }
     return p;
 }
 int main()
 {
-    int n;
-    cin>>n;
-    if((ksm(2,n,7)-1)%7==0)
-    cout<<"YES";
-    else cout<<"NO";
-
+    ll a,b,c;
+    cin>>a>>b>>c ;
+    cout<<ksm(a,b,c);
 }
