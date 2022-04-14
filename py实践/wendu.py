@@ -1,5 +1,4 @@
 def temp(TempStr):
-
     if TempStr[0] in ['c','C']:
      F=1.8*eval(TempStr[1:])+32
      print("F{:.2f}".format(F))
