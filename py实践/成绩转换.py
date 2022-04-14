@@ -10,7 +10,7 @@
 while True:
     try:
         a=eval(input())
-        if a>=90 and a<=100:
+        if 90<=a<=100:
             print("A")
         elif a>=80 and a<=89:
             print("B")
