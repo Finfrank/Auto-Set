@@ -14,9 +14,9 @@
 using namespace std;
 typedef long long ll;
 const int N=0x3f3f3f;
-ll ksm(ll a,ll b,ll c)
+int ksm(int a,int b,int c)
 {
-    ll p=1;
+    int p=1;
     if(b<=0) return 0;
     while(b>0)
     {
@@ -28,7 +28,7 @@ ll ksm(ll a,ll b,ll c)
 }
 int main()
 {
-    ll a,b,c;
-    cin>>a>>b>>c ;
-    cout<<ksm(a,b,c);
+    int n;
+    cin>>n;
+    cout<<(n*ksm(2,n,10009))%10009;
 }

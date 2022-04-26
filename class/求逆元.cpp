@@ -15,7 +15,7 @@ using namespace std;
 typedef long long ll;
 ll gcdd(ll a ,ll b,ll &c,ll &d)
 {
-    if(b==0)
+    if(!b)
     {
         c=1,d=0;
         return a;
