@@ -4,6 +4,8 @@
         "iostream": "cpp",
         "algorithm": "cpp",
         "iomanip": "cpp",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "unordered_map": "cpp",
+        "map": "cpp"
     }
 }
