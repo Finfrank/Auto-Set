@@ -41,34 +41,3 @@ int main()
     }
     
 }
-// #include<bits/stdc++.h>
-// using namespace std;
-// typedef long long ll;
-// ll extendgcd(ll a,ll b,ll &x,ll &y)
-// {
-// 	if (b==0)
-// 	{
-// 		x=1, y=0;
-// 		return a;
-// 	}
-// 	ll t=extendgcd(b, a % b, y, x);
-// 	y = y-a/b*x;
-// 	return t;
-// }
-// ll fun(int a,int mod)
-// {
-// 	ll x, y;
-// 	ll d=extendgcd(a,mod,x,y);
-// 	return (x%mod+mod)%mod;
-// }
-// int main()
-// {
-//     int T,x,y;
-//     cin>>T;
-//     while(T--)
-//     {
-//         cin>>x;
-//         y=fun(x,1e9+7);
-//         cout<<y<<endl;
-//     }
-// }
