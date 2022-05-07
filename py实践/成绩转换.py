@@ -24,3 +24,4 @@ while True:
             print("Score is error!")
     except:
         break
+#push test
