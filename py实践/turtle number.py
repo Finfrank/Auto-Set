@@ -7,14 +7,13 @@
 # tur.speed(10)
 import turtle
 
-
 x = int(input("Which number: "))
 scale = int(input("What size: "))
 
 digit = 0
 
 
-t= turtle.Pen()
+t=turtle.Pen()
 turtle.screensize(bg="black")
 t.pensize(10)
 t.speed(150)
@@ -54,7 +53,7 @@ def two():
     t.down()
  
 def three():
-    t.color("#FAF9DE")
+    t.pencolor("#FAF9DE")
     t.down()
     t.left(180)
     t.forward(scale)
@@ -200,8 +199,10 @@ def nine():
 def zero():
     t.down()
     t.left(90)
+    t.pencolor("#DCE2F1")
     t.forward(2*scale)
     t.left(90)
+    t.pencolor("#EAEAEF")
     t.forward(scale)
     t.left(90)
     t.forward(2*scale)

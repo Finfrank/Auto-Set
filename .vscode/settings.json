@@ -6,7 +6,9 @@
         "iomanip": "cpp",
         "cmath": "cpp",
         "unordered_map": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "iosfwd": "cpp",
+        "vector": "cpp"
     },
     "python.analysis.extraPaths": [
         "./src",
