@@ -39,5 +39,4 @@ int main()
         cin>>x;
         cout<<solve(x,1e9+7)<<endl;
     }
-    
 }
