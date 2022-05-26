@@ -1,3 +1,4 @@
+from marshal import version
 import math
 def j(a,b,n):
     q=1
@@ -15,9 +16,9 @@ def ksm(a,b,n):
 while True:
     n=int(input())
     for i in range(2,n-1):
-        if j(i,n-1,n)==n:
+        if j(i,(n-1)>>1,n)==n:
             print(i)
-
+            break
 # def multimod(a,k,n):    #快速幂取模
 #     ans=1
 #     while(k!=0):
