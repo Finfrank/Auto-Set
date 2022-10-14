@@ -8,7 +8,8 @@
         "unordered_map": "cpp",
         "map": "cpp",
         "iosfwd": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "random": "cpp"
     },
     "python.analysis.extraPaths": [
         "./src",
