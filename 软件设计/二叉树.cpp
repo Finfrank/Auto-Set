@@ -13,7 +13,7 @@
 #include<set>
 using namespace std;
 typedef struct Tnode{
-    int data;
+    char data;
     int l,r;
     char q;
     struct Tnode *lchild,*rchild;
@@ -66,42 +66,96 @@ typedef struct Tnode{
 //     }
 // }
 
-int findroot(Tnode a[])
-{
-    int n,num[15]={0},root=-1,i;
-    cin>>n;
-    char c,b;
-    if(n)
+// int findroot(Tnode a[])
+// {
+//     int n,num[15]={0},root=-1,i;
+//     cin>>n;
+//     char c,b;
+//     if(n)
+//     {
+//         for(i = 0; i < n; i++)
+//         {
+//             getchar();
+//             cin>>a[i].q>>c>>b;
+//             if(c!='-')
+//             {
+//                 a[i].l = c - '0';
+//                 num[a[i].l] = 1;
+//             } 
+//             else a[i].l=-1;
+//             if(b!='-')
+//             {
+//                 a[i].r = b - '0';
+//                 num[a[i].r] = 1;
+//             } 
+//             else a[i].r=-1;
+//         }
+//         for(i = 0; i < n; i++) if(!num[i]) break;
+//         root = i; 
+//     }
+//     return root;
+// }
+string s;
+int init=0;
+void CreateTree(BTree *a){
+    BTree L=(*a);
+    char q;
+    q=s[init++];
+    if(q=='#') {(*a)=NULL;return;}
+    else
     {
-        for(i = 0; i < n; i++)
-        {
-            getchar();
-            cin>>a[i].q>>c>>b;
-            if(c!='-')
-            {
-                a[i].l = c - '0';
-                num[a[i].l] = 1;
-            } 
-            else a[i].l=-1;
-            if(b!='-')
-            {
-                a[i].r = b - '0';
-                num[a[i].r] = 1;
-            } 
-            else a[i].r=-1;
-        }
-        for(i = 0; i < n; i++) if(!num[i]) break;
-        root = i; 
+        (*a)=(BTree)malloc(sizeof(Tnode));
+        if(!*a) return;
+        (*a)->data=q;
+        CreateTree(&(*a)->lchild);
+        CreateTree(&(*a)->rchild);
     }
-    return root;
+}
+bool IsCompleteBiTree(BTree root) {
+	if (root == NULL) {
+		return 0;
+	}
+	queue<Tnode*>Q;
+	Tnode* cur = root;
+	Q.push(cur);
+	while (!Q.empty()) {
+		Tnode* tmp = Q.front();
+		Q.pop();
+		if (tmp == NULL) {
+			while (!Q.empty()) {
+				tmp = Q.front();
+				Q.pop();
+				if (tmp != NULL) {
+					return false;
+				}
+			}
+			return true;
+		}
+		Q.push(tmp->lchild);
+		Q.push(tmp->rchild);
+	}
 }
 
 int main(int argc,char const *argv[]) {
-    Tree a1,a2;
-    cout<<a1[findroot(a1)].q<<endl;
-    cout<<a2[findroot(a2)].q<<endl;
+    while(getline(cin,s)){
+    BTree a;
+    a=NULL;
+    CreateTree(&a);
+    if(IsCompleteBiTree(a)) cout<<"Yes"<<endl;
+    else cout<<"No"<<endl;
+    }}
 
-}
+
+
+    
+    // Tree a1,a2;
+    // int t1=findroot(a1);
+    // int t2=findroot(a2);
+    // if(t1>=0&&t2>=0){
+    // cout<<a1[t1].q<<endl;
+    // cout<<a2[t2].q<<endl;
+    // }
+
 
 
 

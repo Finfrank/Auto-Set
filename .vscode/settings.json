@@ -9,7 +9,18 @@
         "map": "cpp",
         "iosfwd": "cpp",
         "vector": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "stack": "cpp",
+        "type_traits": "cpp",
+        "ios": "cpp",
+        "list": "cpp",
+        "queue": "cpp",
+        "utility": "cpp",
+        "ostream": "cpp",
+        "__split_buffer": "cpp",
+        "array": "cpp",
+        "deque": "cpp",
+        "string_view": "cpp"
     },
     "python.analysis.extraPaths": [
         "./src",
